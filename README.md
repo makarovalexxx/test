@@ -3,16 +3,19 @@
 Приложение “Список задач” на SvelteKit с локальным хранением в IndexedDB (Dexie), TypeScript и TailwindCSS.
 
 ## Стек
+
 - SvelteKit (SSR отключён для работы с IndexedDB на клиенте)
 - TypeScript
 - Dexie (IndexedDB)
 - Tailwind CSS
 
 Почему TailwindCSS:
+
 - Быстрый контроль над адаптивной вёрсткой без тяжёлых UI-библиотек
 - Минимальный вес и предсказуемость стилей
 
 ## Возможности
+
 - CRUD: добавление, просмотр, редактирование, удаление задач
 - Поиск по названию
 - Локальное хранение в IndexedDB (таблица `todos`)
@@ -21,6 +24,7 @@
 - Простые анимации (fade/fly)
 
 ## Быстрый старт
+
 ```bash
 npm install
 npm run dev
@@ -28,12 +32,14 @@ npm run dev
 ```
 
 Сборка:
+
 ```bash
 npm run build
 npm run preview
 ```
 
 ## Структура
+
 - `src/lib/types.ts` — типы (`Todo`, `TodoStatus`)
 - `src/lib/db.ts` — инициализация Dexie и схема
 - `src/lib/todos.ts` — CRUD-утилиты поверх Dexie
@@ -44,17 +50,16 @@ npm run preview
 - `src/routes/+page.svelte` — UI: форма, список, поиск, редактирование/удаление
 - `src/app.css`, `tailwind.config.js`, `postcss.config.js` — Tailwind
 
-## Скриншот
-Скриншот интерфейса: `docs/screenshot.png` (добавьте при демонстрации).
-
 ## Логи промптов
-См. `docs/AI_LOG.md` — минимум 5 ключевых промптов с краткими ответами ИИ.
+
+См. `docs/AI_LOG.md`
 
 ## Совместимость
-- Chrome 120+ (обязательно)
-- Firefox 120+, Safari 17+ (желательно)
+
+- Chrome 120+
 
 ## Критерии чек-листа (выполнено)
+
 - Проект запускается `npm run dev`
 - CRUD + поиск
 - Данные сохраняются в IndexedDB
@@ -64,9 +69,9 @@ npm run preview
 - Отсутствуют `console.log` в финальном коде
 
 ## Временные метки (пример)
+
 - Настройка проекта: 20 мин
 - База (Dexie) + типы: 25 мин
 - UI + CRUD + поиск: 60 мин
 - Уведомления + анимации: 20 мин
 - Документация: 20 мин
-
